@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuditFlow</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Sign-in screen -->
+  <div id="auth-screen" class="auth-screen"></div>
+
+  <!-- Main app shell (hidden until signed in) -->
+  <div id="app-shell" class="app-shell hidden">
+    <div id="sidebar-backdrop" class="sidebar-backdrop hidden"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo" id="app-logo">AuditFlow</div>
+      <nav id="sidebar-nav" class="sidebar-nav"></nav>
+      <div class="sidebar-version">AuditFlow v1.0.0</div>
+    </aside>
+    <div class="main-column">
+      <div id="impersonation-banner" class="hidden"></div>
+      <div id="announcement-banner" class="announcement-banner hidden"></div>
+      <header class="topbar">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div id="topbar-user" class="topbar-user"></div>
+      </header>
+      <main id="app-content" class="app-content"></main>
+    </div>
+  </div>
+
+  <script type="module" src="config.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
